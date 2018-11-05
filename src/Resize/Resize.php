@@ -1,8 +1,8 @@
 <?php
 
-namespace Vendor\Cropper\LoadSave;
+namespace Vendor\Cropper\Resize;
 
-class LoadSave
+class Resize
 {
     /**
      * @var string
@@ -10,7 +10,7 @@ class LoadSave
     private $work_file;
 
     /**
-     * LoadSave constructor.
+     * Resize constructor.
      * @param $file
      */
     public function __construct($file)
@@ -19,19 +19,10 @@ class LoadSave
     }
 
     /**
-     * @param $path
+     * @param $size
      * @return string
      */
-    public function loadFile($path)
-    {
-        return $this->work_file;
-    }
-
-    /**
-     * @param $path
-     * @return string
-     */
-    public function saveFile($path)
+    public function resizeImage($size)
     {
         return $this->work_file;
     }

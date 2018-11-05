@@ -8,8 +8,11 @@ class Client implements ClientInterface
   {
   }
 
+  /**
+   * @return string
+   */
   public function getResult()
   {
-    return 'Ok';
+      return 'Ok';
   }
 }

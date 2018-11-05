@@ -4,5 +4,10 @@ namespace Vendor\Cropper\Cropp;
 
 abstract class AbstractCropp
 {
-    abstract public function croppImage($file, $params);
+    /**
+     * @param $type
+     * @param $size
+     * @return mixed
+     */
+    abstract public function croppImage($type, $size);
 }

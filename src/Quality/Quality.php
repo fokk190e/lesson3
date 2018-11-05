@@ -1,8 +1,8 @@
 <?php
 
-namespace Vendor\Cropper\LoadSave;
+namespace Vendor\Cropper\Quality;
 
-class LoadSave
+class Quality
 {
     /**
      * @var string
@@ -10,7 +10,7 @@ class LoadSave
     private $work_file;
 
     /**
-     * LoadSave constructor.
+     * Quality constructor.
      * @param $file
      */
     public function __construct($file)
@@ -19,19 +19,10 @@ class LoadSave
     }
 
     /**
-     * @param $path
+     * @param $quality
      * @return string
      */
-    public function loadFile($path)
-    {
-        return $this->work_file;
-    }
-
-    /**
-     * @param $path
-     * @return string
-     */
-    public function saveFile($path)
+    public function setQuality($quality)
     {
         return $this->work_file;
     }

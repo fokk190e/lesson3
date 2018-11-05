@@ -4,24 +4,57 @@ namespace Vendor\Cropper\Cropp;
 
 class Cropp extends AbstractCropp
 {
-    public function __construct()
+
+    /**
+     * @var string
+     */
+    private $work_file;
+
+    public function __construct($file)
     {
+        $this->work_file = $file;
     }
 
     /**
-     * @param $file
-     * @param $params
-     *
-     * @return object
+     * @param $type
+     * @param $size
+     * @return string
      */
-    public function croppImage($file, $params)
+    public function croppImage($type, $size)
     {
-      if($params['type']) {
-        return new CroppJpg($file, $params);
-      } else if($params['type']) {
-        return new CroppPng($file, $params);
-      } else {
-        return new CroppSvg($file, $params);
-      }
+        if($type) {
+            return $this->croppJpg($size);
+        } else if($type) {
+            return $this->croppPng($size);
+        } else {
+            return $this->croppSvg($size);
+        }
+    }
+
+    /**
+     * @param $size
+     * @return string
+     */
+    public function croppPng($size)
+    {
+        return $this->work_file;
+    }
+
+    /**
+     * @param $size
+     * @return string
+     */
+    public function croppJpg($size)
+    {
+        return $this->work_file;
+    }
+
+    /**
+     * @param $size
+     * @return string
+     */
+    public function croppSvn($size)
+    {
+        return $this->work_file;
     }
 }
